@@ -10,9 +10,13 @@ from datetime import datetime
 
 import streamlit as st
 
+
 from app.config import validate_config, BRIEFING_HOUR, BRIEFING_MINUTE, TIMEZONE
 from app.main import generate_briefing, load_latest_briefing
 
+import sys
+sys.stdout.reconfigure(line_buffering=True)
+sys.stderr.reconfigure(line_buffering=True)
 st.set_page_config(page_title="MorningBrief AI", page_icon="📰", layout="centered")
 
 st.title("📰 MorningBrief AI")
